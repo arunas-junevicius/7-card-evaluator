@@ -1,4 +1,4 @@
-package lt.solisnum.poker.evaluator;
+package lt.solisnumus.poker.evaluator;
 
 import java.io.DataInputStream;
 

@@ -1,4 +1,4 @@
-package lt.solisnum.poker.evaluator;
+package lt.solisnumus.poker.evaluator;
 
 public class Card {
     private final short STEP = 4;

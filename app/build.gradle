@@ -1,13 +1,11 @@
 apply plugin: 'application'
 
-mainClassName = 'lt.solisnum.poker.evaluator.Runner'
-
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
-mainClassName  = 'lt.solisnum.poker.evaluator.Runner'
+mainClassName  = 'lt.solisnumus.poker.evaluator.Runner'
 
-group 'lt.solisnum'
+group 'lt.solisnumus'
 version '1.0-SNAPSHOT'
 
 jar {
