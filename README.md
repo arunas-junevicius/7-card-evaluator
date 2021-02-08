@@ -70,5 +70,5 @@ It runs in a single thread, although Evaluator does not keep any state and can b
 
 # TODO
 
-Pre-calculated values might be used to determine 5-card or 6-card hand equivalence values, but it would require to update lookup 
-table and fill in some black values. 
+- Pre-calculated values might be used to determine 5-card or 6-card hand equivalence values, but it would require to update lookup 
+table and fill in some blank values.
