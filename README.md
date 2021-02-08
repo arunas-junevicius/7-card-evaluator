@@ -27,14 +27,14 @@ one of 4 bits will be set. For example:
 ## Evaluating a flush
 
 In order to determine (straight) flush equivalence value, every card has one of 13 associated suit values that are used to calculate unique hash. 
-Adding these values 5, 6 or 7 times will give index of an array ranging from 31 to 6848.
+Adding these values 5, 6 or 7 times will give an index of an array ranging from 31 to 6848.
 
 These numbers can be added only when cards are of the same suit. In order to do that every of these 13 values are shifted by 16 bits and then shifted 
 back depending on which bit was set when determining a flush.
 ```
->>> CLUBS = 4
+>>> CLUBS = 3
 >>> suit = 1728 << 16*CLUBS
->>> hash += suit >> ((3790*6+3825) & 0x11110).bit_length
+>>> hash += suit >> ((3790*6+3825) & 0x11110).bit_length()
 ...
 >>> hash &= 0x1FFF
 ```
@@ -67,3 +67,8 @@ Contains main class which accepts number how many times (20 by default) to run h
 - time/ms
 
 It runs in a single thread, although Evaluator does not keep any state and can be safely used in multithreaded environment.
+
+# TODO
+
+Pre-calculated values might be used to determine 5-card or 6-card hand equivalence values, but it would require to update lookup 
+table and fill in some black values. 
